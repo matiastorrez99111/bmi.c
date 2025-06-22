@@ -3,18 +3,22 @@
 int main() {
     float peso, altura, imc;
 
-
+do {
     printf("Ingrese su peso en kilogramos (kg): ");
     scanf("%f", &peso);
+if (peso <=0){
+printf("Error: el peso debe ser un numero mayor que cero.\n");
+}
+} while (peso <=0);
 
+do {
     printf("Ingrese su altura en metros (m): ");
     scanf("%f", &altura);
 
     if (altura <= 0) {
         printf("Error: La altura debe ser mayor que cero.\n");
-        return 1;
     }
-
+} while (altura <=0);
     imc = peso / (altura * altura);
 
 printf("\nTabla de IMC");
